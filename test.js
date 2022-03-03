@@ -1,4 +1,4 @@
-const form = document.querySelector('form');
+const form = document.getElementById('form');
 
 function random(number) {
     return Math.floor(Math.random() * (number+1));
@@ -10,7 +10,10 @@ function bgChange() {
 }
 
 form.addEventListener('click', event => {
-    event.target.style.backgroundColor = bgChange();
+    if (event.target.id === 'circle') {
+        event.target.style.backgroundColor = bgChange();
+    }
+
     if (event.target.style.animationPlayState === `paused`) {
         event.target.style.animationPlayState = `running`;
     } else {
