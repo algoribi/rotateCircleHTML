@@ -12,18 +12,12 @@
                 2px 2px 1px #778899;
 
     animation-play-state: running;
-    animation: right_rotate_circly 10s linear infinite;
+    animation: rotate_circly 10s linear infinite;
     transform-origin: center;
 }
 
-@keyframes right_rotate_circly{
+@keyframes rotate_circly{
     100% {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes left_rotate_circly{
-    100% {
-        transform: rotate(-360deg);
     }
 }
