@@ -10,11 +10,14 @@ function bgChange() {
 }
 
 circle.addEventListener('click', event => {
+    let counter = 0;
     event.target.style.backgroundColor = bgChange();
 
     if (event.target.style.animationPlayState === `paused`) {
         event.target.style.animationPlayState = `running`;
+        counter++;
     } else {
         event.target.style.animationPlayState = `paused`;
     }
+    console.log(counter);
 });
